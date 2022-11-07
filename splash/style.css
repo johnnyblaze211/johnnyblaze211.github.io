@@ -1,0 +1,437 @@
+body {
+	background:#fff url(output2.jpeg); 
+	font-family: "Cormorant+Garmond";
+	}
+main {
+    margin-left: 10em;
+    margin-right:20%;
+    width: 65em;
+}
+.front {
+    margin-left: 10em;
+    margin-right:20%;
+    width: 65em;
+    padding-top: 10px;
+    display: block;
+}
+
+/* ------------------------------------------------------------------------ */
+/* ------------ section and div types (in TEI, main div types ------------- */
+/* ------------------------------------------------------------------------ */
+
+section.titlePage {
+    border-bottom: black solid 3px;
+    padding-top: 10px;
+    display: block;
+}
+section.notes {
+    margin-left: 10em;
+    margin-right:20%;
+    width: 65em;
+    border-top: black solid 3px;
+    padding-top: 10px;
+    display: block;
+}
+section.noteSpace { /* makes enough space at the end of webpage for the note link to bring the specified note to the top of the screen. */
+    height: 60em;
+    color: #FFFFFF;
+}
+section.noteSpace > h2 {color: #FFFFFF;}
+div.novel {
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+    width: 60em;
+    padding: 20px;
+    text-align: left;
+}
+div.essay {
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+    width: 60em;
+    padding: 20px;
+    text-align: left;
+}
+div.prose {
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+    width: 60em;
+    padding: 20px;
+    text-align: left;
+}
+div.biography {
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+    width: 60em;
+    padding: 20px;
+    text-align: left;
+}
+div.poem {
+    margin-left: 12.5em;
+    margin-right: 2.5em;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    width: 60em;
+}
+div.drama {
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+    width: 60em;
+    padding: 20px;
+    text-align: left;
+}
+div.set {
+    font-style: italic;
+}
+header {
+    color: #46597D;
+	font-size: 1.3em;
+	margin: 1.2em 0em .6em 0em;
+	font-weight: 600;
+	text-align: center;
+}
+
+
+/* ------------------------------------------------------------------------ */
+/* -------------------- paragraphs and indentations------------------------ */
+/* ------------------------------------------------------------------------ */
+
+p {
+    font-size: 24px;
+	line-height: 30px;
+	text-indent: 45px;
+	letter-spacing: 0.6px;
+}
+.noindent {
+	font-size: 24px;
+	line-height: 30px;
+	text-indent: 0px;
+	letter-spacing: 0.6px;
+}
+.quote { /* This is only for article/essay titles */
+    font-size: 24px;
+	line-height: 30px;
+	letter-spacing: 0.6px;
+}
+.quote::before { content: open-quote; }
+.quote::after { content: close-quote; }
+
+.note {
+    /* currently, no difference between p.note and p */
+}
+div.blockquote { /* This is for blockquotes not inside a paragraph */
+    margin-left: 8em;
+	font-size: 24px;
+	line-height: 30px;
+	letter-spacing: 0.6px;
+	display: block;
+}
+span.quote { /* This is for text that is quoted inline */
+    font-size: 24px;
+	line-height: 30px;
+	letter-spacing: 0.6px;
+	display: inline;
+}
+/* comment out or delete these next two rules if you
+ *a) already put quotation marks around quotations in your TEI doc;
+ *b) some inline quotations in your TEI doc do not have quotation marks around them
+ * and so you will be coding them sometimes and sometimes not. */
+span.quote::before { content: open-quote; }
+span.quote::after { content: close-quote; }
+
+
+/* ------------------------------------------------------------------------ */
+/* -----------------------page numbers and forme work-----------------------*/
+/* ------------------------------------------------------------------------ */
+
+.pageNumber {
+    display: block;
+    width: 100%;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+	font-size: 24px;
+	line-height: 30px;
+	text-indent: 0px;
+	letter-spacing: 0.6px;
+	text-align: right;
+}
+.formeWork {
+    /* if no type attributes in fw element */
+}
+.sig {
+    display: block;
+    text-align: center;
+}
+.vol {
+    display: block;
+    text-align: left;
+}
+.catch {
+    display: block;
+    text-align: right;
+}
+
+/* ------------------------------------------------------------------------ */
+/* ---------------------------appearance of links-------------------------- */
+/* ------------------------------------------------------------------------ */
+
+a:link {
+	text-decoration: underline;
+	font-weight: bold;
+	color: #000;
+}
+a:visited {
+	text-decoration: underline;
+	font-weight: bold;
+	color: #000;
+}
+a:active {
+	text-decoration: underline;
+	font-weight: bold;
+	color: #000;
+}
+a:hover {
+	text-decoration: none;
+	color: #396A91;
+}
+
+
+/* ------------------------------------------------------------------------ */
+/* -------------------------appearance of font/type------------------------ */
+/* ------------------------------------------------------------------------ */
+
+h1 {
+	color: #46597D;
+	font-size: 30px;
+	font-weight: normal;
+	margin-top: 0em;
+	margin-bottom: 0em;
+/* both set to zero and padding in header div is used intead to deal
+ * with compound ie pc problems that are beyound summary in a simple comment. */
+}
+h2 {
+	color: #46597D;
+	font-size: 28px;
+	margin: 1.2em 0em 1.2em 0em;
+	font-weight: 600;
+}
+h3 {
+	color: #46597D;
+	font-size: 26px;
+	margin: 1.2em 0em .6em 0em;
+	font-weight: 600;
+}
+h4 {
+	color: #46597D;
+	font-size: 24px;
+	margin: 1.2em 0em .6em 0em;
+	font-weight: bold;
+}
+h5 {
+	color: #46597D;
+	font-size: 22px;
+	margin: 1.2em 0em 1.2em 0em;
+	font-weight: bold;
+}
+h6 {
+	color: #46597D;
+	font-size: 20px;
+	margin: 1.2em 0em 1.2em 0em;
+	font-weight: bold;
+}
+ol, ul, li {
+	list-style: none;
+	font-size: 24px;
+	line-height: 30px;
+	letter-spacing: 0.6px;
+	margin-top: 0.2em;
+	margin-bottom: 0.1em;
+	margin-left: -1em;
+}
+em {
+    font-style: italic;
+}
+.title {
+    font-style: italic;
+}
+.titleQ::before {
+    content: '\0022';
+}
+.titleQ::after {
+    content: '\0022';
+}
+header > .title {
+    display: block;
+}
+header > .titleQ {
+    display: block;
+}
+header > .author {
+    display: block;
+}
+.italic {
+    font-style: italic;
+}
+.small {
+    font-size: 80%;
+}
+.large {
+    font-size: 125%
+}
+.dropcap {
+    background: #303030;
+    color: #FDF9F2;
+    float: left;
+    font-size: 6rem;
+    line-height: 1;
+    margin: -0.1em 0.1em 0.05em 0;
+    padding: 0.1em;
+    display: block;
+}
+.smcaps {
+    font-variant: small-caps;
+}
+
+/* ------------------------------------------------------------------------ */
+/* -------------------------------------drama------------------------------ */
+/* ------------------------------------------------------------------------ */
+
+.stage {
+    font-style: italic;
+}
+.speaker {
+    font-weight: bold;
+    text-align: left;
+    margin-left: 0;
+}
+.speech {
+    display: block;
+    margin-left: 10em;
+    text-indent: 0;
+}
+/* right now, <castList> and <castGroup> are being styled by ul ol li above;
+ * add their styling here as .castList and .castGroup if you want a different style list than specified above */
+ /* Can also add .role if you want to style it here; comma-space comes from xslt*/
+.roleDesc {
+    font-style: italic;
+}
+
+/* ------------------------------------------------------------------------ */
+/* -----------------------------------poems-------------------------------- */
+/* ------------------------------------------------------------------------ */
+
+.stanza {
+    width: 100%;
+    display: table; /* necessary for displaying lines if line numbers used, see below */
+    text-indent: 0px;
+	font-size: 24px;
+	line-height: 26px;
+	letter-spacing: 0.6px;
+	margin-left: 5em;
+}
+.blockquote > .stanza {
+    margin-left: 0;
+}
+.l {
+    width: 100%;
+	display: table-row;
+}
+.ltext {
+    width: 93%;
+    display: table-cell;
+}
+.lno {
+    width: 7%;
+    display: table-cell;
+}
+/* indentation classes can be used in poems, divs, paragraphs, etc. */
+.indent {
+    text-indent: 10px;
+	font-size: 24px;
+	line-height: 30px;
+	letter-spacing: 0.6px;
+	display: block;
+}
+.indent1 {
+	text-indent: 20px;
+	font-size: 24px;
+    line-height: 30px;
+	letter-spacing: 0.6px;
+	display: block;
+}
+.indent2 {
+	text-indent: 30px;
+	font-size: 24px;
+	line-height: 30px;
+	letter-spacing: 0.6px;
+	display: block;
+}
+.indent3 {
+	text-indent: 40px;
+	font-size: 24px;
+	line-height: 30px;
+	letter-spacing: 0.6px;
+	display: block;
+}
+.indent4 {
+	text-indent: 50px;
+	font-size: 24px;
+	line-height: 30px;
+	letter-spacing: 0.6px;
+	display: block;
+}
+.indent5 {
+	text-indent: 60px;
+	font-size: 24px;
+	line-height: 30px;
+	letter-spacing: 0.6px;
+	display: block;
+}
+.indent6 {
+	text-indent: 70px;
+	font-size: 24px;
+	line-height: 30px;
+	letter-spacing: 0.6px;
+	display: block;
+}
+
+/* ------------------------------------------------------------------------ */
+/* ----------------------------------letters------------------------------- */
+/* ------------------------------------------------------------------------ */
+.opener {
+    font-size: 24px;
+	line-height: 30px;
+	letter-spacing: 0.6px;
+}
+.closer {
+    font-size: 24px;
+	line-height: 30px;
+	letter-spacing: 0.6px;
+}
+.salute {
+font-size: 24px;
+	line-height: 30px;
+	letter-spacing: 0.6px;
+    display: block;
+}
+.dateline {
+font-size: 24px;
+	line-height: 30px;
+	letter-spacing: 0.6px;
+    display: block;
+    margin-left: 20em;
+}
+.signed {
+font-size: 24px;
+	line-height: 30px;
+	letter-spacing: 0.6px;
+    display: block;
+}
+
+/* ------------------------------------------------------------------------ */
+/* -----------------------------------notes-------------------------------- */
+/* ------------------------------------------------------------------------ */
+
+.noteNumber {
+    font-size: 14px;
+	line-height: 30px;
+}
